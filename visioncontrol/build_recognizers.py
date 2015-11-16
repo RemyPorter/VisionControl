@@ -28,4 +28,4 @@ def descriptions(prefix=basepath):
 def load_descriptors(prefix=basepath):
     loadpath = os.path.join(basepath, "descriptors")
     return [np.load(os.path.join(loadpath, f))
-        for f in os.listdir(loadpath)]
+        for f in os.listdir(loadpath) if f.endswith(".npy")]
